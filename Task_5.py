@@ -1,6 +1,7 @@
 num = int(input('Введите число: '))
 my = [7, 5, 3, 3, 2]
-for x in my:
+x = 0
+while 1:
     if num > my[0]:
         my.insert(0, num)
         print(my)
@@ -9,17 +10,17 @@ for x in my:
         my.append(num)
         print(my)
         break
-    elif num == x:
-        my.insert(my.index(x) + 1, num)
+    elif num > my[x]:
+        my.insert(x, num)
         print(my)
         break
-    elif num < x:
-        my.insert(my.index(x) + 1, num)
+    elif num == my[x]:
+        my.insert(x + 1, num)
         print(my)
         break
+    x += 1
 
-
-
+print("-" * 5, "Второй способ", "-" * 5)
 
 n = int(input('Number enter: '))
 r = [7, 5, 3, 3, 2]
